@@ -14,12 +14,12 @@
 
           </div> 
 
-        <div class="col-lg-6 col-md-6 mobile-img text-center">
+        <div class="col-lg-6 col-md-6 mobile-img text-center" style="background-image: url('https://images.pexels.com/photos/4691571/pexels-photo-4691571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');">
             <h4 class="mt-3 pt-3" style="color:#512B81; font-family: Italiana; font-weight: 700;">{{displayImage.imageName}}</h4>
             <br>
                  <h6><span style="font-weight: bold;">Caption:</span></h6> <small style="font-size: 14px;">{{displayImage.description}}</small> <br><br>
-                    <p><span style="font-weight: bold; font-size: 12px;">Origin:</span> <small style="font-size: 12px;">{{displayImage.location}}</small> |<span style="font-weight: bold; font-size: 12px;">Category:</span> <small style="font-size: 12px;">{{displayImage.category}}</small> </p> 
-                    <h6><span style="font-weight: bold; font-size: 12px;">Posted:</span> <small style="font-size: 12px;">{{displayImage.uploadDate|timesince}} ago</small> </h6> 
+                    <p><span style="font-weight: bold; font-size: 14px;">Origin:</span> <small style="font-size: 12px;">{{displayImage.location}}</small> |<span style="font-weight: bold; font-size: 14px;">Category:</span> <small style="font-size: 14px;">{{displayImage.category}}</small> </p> 
+                    <h6><span style="font-weight: bold; font-size: 14px;">Posted:</span> <small style="font-size: 12px;">{{displayImage.uploadDate|timesince}} ago</small> </h6> 
                     
                   
                         <button class="btn btn-outline-primary copy-btn button-17" data-hex="{% url 'image' displayImage.id %}" style="box-shadow: #ee482321 0px 7px 29px 0px;">

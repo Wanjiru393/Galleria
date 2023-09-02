@@ -1,9 +1,9 @@
 {% extends "layout.html" %}
 {% block content %}
 <div class="container" style="margin-top: 2%;">
-  <h2 class="text-center" style="font-weight: bold; color: #000; padding-bottom: 2%; font-size: 25px;" >Found {{ searchedImages|length }} images for this search</h2>
+  <h2 class="text-center" style="font-weight: bold; color: #000; padding-bottom: 2%; font-size: 20px;" >Found {{ searchedImages|length }} images for this search</h2>
 
-    <div class="row">
+    <div class="row md-5"  style="background-image: url('https://images.pexels.com/photos/4691571/pexels-photo-4691571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');background-size: cover;">
         {% for searchedImage in searchedImages %}
 
         <div class="col mb-4" >
