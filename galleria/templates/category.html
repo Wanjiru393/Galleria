@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for displaycategory in displaycategories %}
+
+        <div class="col mb-4">
+          <div class="card shadow-sm showHover">
+            <a href="{% url 'image' displaycategory.id %}" style="text-decoration: none;">
+              <img src="{{displaycategory.image.url}}" class="img-responsive" alt="..." data-toggle="modal" data-target="#" style="width:100%; height:100%;">
+            </a>
+
+            <div class="card-body" style="margin-top: -3.3em;">
+              <div class="d-flex justify-content-between align-items-center">
+                
+                <small class="hideHover" style="font-size: 10px; font-weight: bold"> <a href="{% url 'image' displaycategory.id %}" style="text-decoration: none; color: #512B81;">View</a></small>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+        </div>
+        </div>
+        </div>
+
+{% endblock content %}
