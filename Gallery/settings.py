@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import mimetypes
 import os
 from pathlib import Path
 from pathlib import Path
@@ -19,6 +20,8 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# A Bug is was encountering
+mimetypes.add_type("text/css", ".css", True)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -140,7 +143,7 @@ DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = os.path.join(BASE_DIR, 'staticfiles/')
+STATIC_URL = 'static/'
 
 
 MEDIA_URL = '/media/'
