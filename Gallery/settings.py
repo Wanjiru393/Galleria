@@ -19,6 +19,7 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+MODE = 'DEV'
 
 # A Bug is was encountering
 mimetypes.add_type("text/css", ".css", True)
@@ -88,7 +89,7 @@ WSGI_APPLICATION = 'Gallery.wsgi.application'
 #     }
 # }
 
-if DEBUG:
+if MODE == 'DEV':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
